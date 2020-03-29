@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace _InputTest.Scripts.Input.Monobehaviours.Commands
+namespace _InputTest.Entity.Scripts.Input.Monobehaviours.Commands
 {
     [RequireComponent(typeof(InputMoveCommand))]
     public class DashCommand : Command

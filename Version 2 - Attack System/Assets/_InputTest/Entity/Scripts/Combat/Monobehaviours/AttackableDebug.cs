@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _InputTest.Scripts.Combat.Monobehaviours
+namespace _InputTest.Entity.Scripts.Combat.Monobehaviours
 {
     public class AttackableDebug : MonoBehaviour, IAttackable
     {

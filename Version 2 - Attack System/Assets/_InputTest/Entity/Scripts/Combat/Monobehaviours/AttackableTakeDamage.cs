@@ -1,8 +1,6 @@
-﻿using System;
-using _InputTest.Entity.Scripts;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace _InputTest.Scripts.Combat.Monobehaviours
+namespace _InputTest.Entity.Scripts.Combat.Monobehaviours
 {
     public class AttackableTakeDamage : MonoBehaviour, IAttackable
     {

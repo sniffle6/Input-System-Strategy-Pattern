@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _InputTest.Scripts.Combat
+namespace _InputTest.Entity.Scripts.Combat
 {
     public interface IAttackable
     {

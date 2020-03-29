@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace _InputTest.Scripts.Input.Monobehaviours.Commands
+namespace _InputTest.Entity.Scripts.Input.Monobehaviours.Commands
 {
     public class MouseRotationCommand : Command
     {

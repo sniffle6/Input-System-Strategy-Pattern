@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using _InputTest.Scripts.Combat;
+using _InputTest.Entity.Scripts.Combat;
 using JetBrains.Annotations;
 using UnityEngine;
 

@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using _InputTest.Scripts;
-using _InputTest.Scripts.Combat;
-using _InputTest.Scripts.Combat.Monobehaviours;
-using _InputTest.Scripts.Input;
-using _InputTest.Scripts.Input.Monobehaviours.Commands;
+﻿using _InputTest.Entity.Scripts.Input.Monobehaviours.Commands;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace _InputTest.Entity.Scripts.Monobehaviours
+namespace _InputTest.Entity.Scripts.Input.Monobehaviours
 {
     public class CharacterInput : MonoBehaviour, IInteractInput, IMoveInput, IRotationInput, ISkillInput, IAttackInput
     {

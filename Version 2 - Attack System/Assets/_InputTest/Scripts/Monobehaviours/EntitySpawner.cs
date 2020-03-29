@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
+using _InputTest.Entity.Scripts.Input.Monobehaviours;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace _InputTest.Entity.Scripts.Monobehaviours
+namespace _InputTest.Scripts.Monobehaviours
 {
     public class EntitySpawner : MonoBehaviour
     {

@@ -1,5 +1,5 @@
-﻿using _InputTest.Scripts;
-using _InputTest.Scripts.Input;
+﻿using _InputTest.Entity.Scripts.Input;
+using _InputTest.Scripts;
 using UnityEngine;
 
 namespace _InputTest.Entity.Scripts.Monobehaviours

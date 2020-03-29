@@ -1,7 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace _InputTest.Scripts.Combat.Monobehaviours
+namespace _InputTest.Entity.Scripts.Combat.Monobehaviours
 {
     public class DestructibleRagdoll : MonoBehaviour, IDestructible
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _InputTest.Scripts.Input.Monobehaviours.Commands
+namespace _InputTest.Entity.Scripts.Input.Monobehaviours.Commands
 {
     public abstract class Command : MonoBehaviour
     {

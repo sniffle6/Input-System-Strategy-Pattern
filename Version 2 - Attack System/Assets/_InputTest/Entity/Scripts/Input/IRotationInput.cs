@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _InputTest.Scripts.Input
+namespace _InputTest.Entity.Scripts.Input
 {
     public interface IRotationInput
     {

@@ -1,12 +1,8 @@
-﻿using System;
-using _InputTest.Scripts;
-using _InputTest.Scripts.Combat;
-using _InputTest.Scripts.Input;
-using _InputTest.Scripts.Input.Monobehaviours.Commands;
+﻿using _InputTest.Entity.Scripts.Combat;
+using _InputTest.Entity.Scripts.Input.Monobehaviours.Commands;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-namespace _InputTest.Entity.Scripts.Monobehaviours
+namespace _InputTest.Entity.Scripts.Input.Monobehaviours
 {
     public class AiInput : MonoBehaviour, IMoveInput, IRotationInput
     {

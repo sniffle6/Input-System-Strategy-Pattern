@@ -1,10 +1,8 @@
-using System;
 using System.Collections;
-using _InputTest.Scripts.Combat;
-using JetBrains.Annotations;
+using _InputTest.Entity.Scripts.Combat;
 using UnityEngine;
 
-namespace _InputTest.Scripts.Input.Monobehaviours.Commands
+namespace _InputTest.Entity.Scripts.Input.Monobehaviours.Commands
 {
     public class AttackCommand : Command
     {
