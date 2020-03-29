@@ -44,25 +44,9 @@ namespace _InputTest.Entity.Scripts.Monobehaviours
         private PlayerInputActions _inputActions;
         private const string LeftMouseButton = "Left Button";
 
-        private (string messageForWorld, bool showMessageToWorld) myTuple = ("Hello World", true);
-
         private void Awake()
         {
             _inputActions = new PlayerInputActions();
-
-
-            int x = 12;
-            int y = 4;
-            var playerPosition = (x, y);
-            
-            print($"Player is at X:{playerPosition.x}, Y:{playerPosition.y}");
-            
-            var item = (Id: 1, ItemName: "Sword", Damage: 32);
-            
-            if (myTuple.showMessageToWorld == true)
-            {
-                print($"My first Tuple says: {myTuple.messageForWorld}");
-            }
         }
 
 

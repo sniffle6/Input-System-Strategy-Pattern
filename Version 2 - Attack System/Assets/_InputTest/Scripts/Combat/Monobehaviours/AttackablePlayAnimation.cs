@@ -5,16 +5,16 @@ namespace _InputTest.Scripts.Combat.Monobehaviours
 {
     public class AttackablePlayAnimation : MonoBehaviour, IAttackable
     {
-        [SerializeField] private string stateName = "Reaction";
         [SerializeField] private string triggerName = "Hit";
 
-        private int _hit; 
+        private int _hit;
         private Animator _animator;
         private ILive _life;
+        
+        private const string StateToPlayFrom = "Empty State";
 
         private void Awake()
         {
-            
             _life = GetComponent<ILive>();
             _animator = GetComponent<Animator>();
             _hit = Animator.StringToHash(triggerName);
@@ -24,11 +24,11 @@ namespace _InputTest.Scripts.Combat.Monobehaviours
         {
             if (_life != null && _life.IsAlive)
             {
-                _animator.SetTrigger(_hit);
+                if (_animator.GetCurrentAnimatorStateInfo(1).IsName(StateToPlayFrom))
+                    _animator.SetTrigger(_hit);
             }
             else if (_life == null)
             {
-                if (_animator.GetCurrentAnimatorStateInfo(0).IsName(stateName))
                     _animator.SetTrigger(_hit);
             }
         }

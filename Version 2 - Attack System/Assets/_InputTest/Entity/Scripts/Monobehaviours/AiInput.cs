@@ -10,12 +10,16 @@ namespace _InputTest.Entity.Scripts.Monobehaviours
 {
     public class AiInput : MonoBehaviour, IMoveInput, IRotationInput
     {
-        public Command moveCommand;
+        [SerializeField] public Transform target;
+        [SerializeField] private Command moveCommand;
+        [SerializeField] private Command attackCommand;
+        [SerializeField] private Command drawSheathCommand;
+
+        private float _speed;
+        private ILive _live;
 
         public Vector3 MoveDirection { get; private set; }
         public Vector3 RotationDirection { get; set; }
-
-        private ILive _live;
 
         private void Awake()
         {
@@ -24,22 +28,37 @@ namespace _InputTest.Entity.Scripts.Monobehaviours
 
         private void Start()
         {
-            MoveDirection = new Vector3(0, 0, -0.25f);
-            moveCommand.Execute();
-
-            InvokeRepeating(nameof(ChangeDirection), 1, Random.Range(1, 4));
+            if (drawSheathCommand)
+                drawSheathCommand.Execute();
         }
 
-        private void ChangeDirection()
+        public void Initiate(Transform moveTo, float speed)
         {
-            if (!_live.IsAlive)
+            target = moveTo;
+            _speed = speed;
+            MoveDirection = (target.position - transform.position).normalized * speed;
+            moveCommand.Execute();
+        }
+
+
+        private void Update()
+        {
+            if (!target || !_live.IsAlive)
             {
+                MoveDirection = Vector3.zero;
+                attackCommand.StopAllCoroutines();
+                return;
+            }
+
+            if (Vector3.Distance(target.position, transform.position) <= 1.25f)
+            {
+                if (attackCommand)
+                    attackCommand.Execute();
                 MoveDirection = Vector3.zero;
             }
             else
-            {
-                MoveDirection = new Vector3((Random.Range(-1, 2) / 4.0f), 0, z: (Random.Range(-1, 2) / 4.0f));
-            }
+                MoveDirection = (target.position - transform.position).normalized * _speed;
+
 
             moveCommand.Execute();
         }

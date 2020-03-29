@@ -6,7 +6,7 @@ namespace _InputTest.Scripts.Combat.Monobehaviours
     {
         public void OnAttacked(GameObject attacker, Attack attack)
         {
-            Debug.Log($"Attacked by {attacker.name} for {attack.Damage.ToString()}, Critical is: {attack.Critical.ToString()}");
+            Debug.Log($"{gameObject.name} was attacked by {attacker.name} for {attack.Damage.ToString()}, Critical is: {attack.Critical.ToString()}");
         }
     }
 }
