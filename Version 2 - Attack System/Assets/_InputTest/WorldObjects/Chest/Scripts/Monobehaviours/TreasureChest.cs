@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace _InputTest.WorldObjects.Chest.Scripts.Monobehaviours
 {
-    public class TreasureChest : MonoBehaviour, IOpenenable, IInteractable
+    public class TreasureChest : MonoBehaviour, IOpenable, IInteractable
     {
         [SerializeField] private float force;
         [SerializeField] private GameObject lootPrefab;
