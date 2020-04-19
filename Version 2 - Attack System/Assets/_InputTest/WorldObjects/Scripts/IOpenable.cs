@@ -1,6 +1,6 @@
 ﻿namespace _InputTest.WorldObjects.Scripts
 {
-    public interface IOpenenable
+    public interface IOpenable
     {
         bool Opened { get; set; }
         
